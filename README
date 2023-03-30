@@ -1,0 +1,39 @@
+Pong Game
+Ege Doğukan Seven 76215
+
+Basically I seperated the project into three parts as recommended in instructions. TopPanel, MiddlePanel and BottomPanel. 
+
+Rungame:
+There, I create a new GameWindow object which starts the game. 
+
+GameWindow:
+This is the main JFrame of the game. Where everything is joined together. 
+
+TopPanel:
+As is in the instructions I placed level, score, lives, timer here. I used labels for all of them. And then I placed TopPanel, which extends JPanel, to the Gamewindow using borderlayout.
+
+MiddlePanel:
+This is where the game is. I created an abstract class "sprite" for objects like paddle, ball etc. and then created their own classes inheriting the sprite class. Then I combined those classes to make the game in MiddlePanel. As well as implementing the game mechanics such as lives and collisions etc. So this is where the game progreses/ ends. And then implemented it to GameWindow with borderlayout. 
+
+BottomPanel:
+There we have the play/pause button as JButton. 
+
+Sprite:
+It is the parent abstract class for Ball and Paddle. I contains location info, setters getters, and abstract move method. 
+
+Ball:
+Inherits sprite. It has its own special move method. As well as reset and draw methods. 
+
+Paddle:
+Inherits sprite. IT has its own special move method. I implemented keyPressed and keyReleased methods and then combined them in MiddlePanel to move the paddle. 
+
+Sources I used:
+https://zetcode.com/javagames/collision/
+https://zetcode.com/gfx/java2d/shapesandfills/
+https://www.youtube.com/watch?v=oLirZqJFKPE&ab_channel=BroCode
+https://www3.ntu.edu.sg/home/ehchua/programming/java/J8a_GameIntro-BouncingBalls.html
+https://www.geeksforgeeks.org/java-swing-jpanel-examples/#:~:text=JPanel%2C%20a%20part%20of%20Java,not%20have%20a%20title%20bar.
+https://www.delftstack.com/howto/java/draw-a-circle-in-java/
+ch26-27 from the book.
+
+**I could not fully finish the powerups part and the play/pause button. So their functions are limited/ not working. 
